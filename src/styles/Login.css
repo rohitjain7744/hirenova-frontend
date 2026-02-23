@@ -1,0 +1,328 @@
+/* =============================== */
+/* AUTH PAGE BACKGROUND */
+/* =============================== */
+
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Glow Background Effects */
+
+.auth-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.glow1 {
+  width: 300px;
+  height: 300px;
+  background: #3b82f6;
+  top: -100px;
+  left: -100px;
+}
+
+.glow2 {
+  width: 350px;
+  height: 350px;
+  background: #8b5cf6;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* =============================== */
+/* LOGIN CARD */
+/* =============================== */
+
+.auth-card {
+  background: rgba(30, 41, 59, 0.9);
+  backdrop-filter: blur(20px);
+  padding: 45px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.auth-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+/* =============================== */
+/* INPUTS */
+/* =============================== */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+}
+
+/* =============================== */
+/* BUTTON */
+/* =============================== */
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =============================== */
+/* SWITCH TEXT */
+/* =============================== */
+
+.switch-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.switch-text span {
+  margin-left: 6px;
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* RESPONSIVE */
+/* =============================== */
+
+@media (max-width: 480px) {
+
+  .auth-card {
+    padding: 35px 25px;
+  }
+
+}
+/* ============================= */
+/* MOBILE FIRST LOGIN DESIGN */
+/* ============================= */
+
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effects */
+
+.auth-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+}
+
+.glow1 {
+  width: 220px;
+  height: 220px;
+  background: #3b82f6;
+  top: -60px;
+  left: -60px;
+}
+
+.glow2 {
+  width: 250px;
+  height: 250px;
+  background: #8b5cf6;
+  bottom: -80px;
+  right: -80px;
+}
+
+/* ============================= */
+/* LOGIN CARD */
+/* ============================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 35px 25px;
+  border-radius: 14px;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* Title */
+
+.auth-card h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.auth-subtitle {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* ============================= */
+/* INPUT FIELDS */
+/* ============================= */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.auth-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #2563eb;
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================= */
+/* SWITCH TEXT */
+/* ============================= */
+
+.switch-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.switch-text span {
+  color: #3b82f6;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ============================= */
+
+/* Tablets */
+@media (min-width: 768px) {
+
+  .auth-card {
+    padding: 45px 35px;
+  }
+
+  .auth-card h2 {
+    font-size: 26px;
+  }
+
+  .auth-subtitle {
+    font-size: 14px;
+  }
+
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+
+  .auth-card {
+    max-width: 450px;
+  }
+
+}

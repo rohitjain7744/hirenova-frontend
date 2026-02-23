@@ -1,0 +1,254 @@
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  overflow: hidden;
+  color: white;
+}
+
+/* DARK BLUE GRADIENT OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.3), transparent 40%),
+              radial-gradient(circle at 80% 20%, rgba(99,102,241,0.3), transparent 40%),
+              linear-gradient(135deg, rgba(10,25,70,0.95), rgba(30,58,138,0.9));
+  z-index: 1;
+}
+
+/* CONTAINER */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT CONTENT */
+.hero-left {
+  max-width: 600px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 35px;
+}
+
+/* MODERN BUTTON */
+.btn-modern {
+  padding: 14px 38px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.btn-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.7);
+}
+
+/* STATS GLASS EFFECT */
+.hero-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-box {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  padding: 20px 30px;
+  border-radius: 16px;
+  text-align: center;
+  min-width: 150px;
+  transition: 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.18);
+}
+
+.stat-box h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* RIGHT IMAGE */
+.hero-right img {
+  width: 600px;
+  animation: floatImage 5s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* FADE UP ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 40px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== MOBILE FIRST IMPROVEMENTS ===== */
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .hero-right img {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .hero-section {
+    padding: 100px 20px 60px 20px;
+    min-height: auto;
+  }
+
+  .hero-left h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .btn-modern {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat-box {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-right img {
+    width: 100%;
+    max-width: 350px;
+    animation: none; /* Disable float animation on mobile for performance */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .hero-left h1 {
+    font-size: 26px;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+  }
+
+  .stat-box h3 {
+    font-size: 18px;
+  }
+
+  .stat-box p {
+    font-size: 12px;
+  }
+}

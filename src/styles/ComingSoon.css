@@ -1,0 +1,97 @@
+/* =============================== */
+/* COMING SOON PAGE */
+/* =============================== */
+
+.coming-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f1f5ff 100%
+  );
+
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+/* Glow Effects */
+.coming-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.4;
+}
+
+.coming-glow1 {
+  background: #c7d2fe;
+  top: -150px;
+  left: -150px;
+}
+
+.coming-glow2 {
+  background: #bfdbfe;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Content */
+.coming-content {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+/* Icon */
+.coming-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Title */
+.coming-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.coming-content p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+/* Badge */
+.coming-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coming-content h1 {
+    font-size: 26px;
+  }
+}

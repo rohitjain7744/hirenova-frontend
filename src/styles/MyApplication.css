@@ -1,0 +1,240 @@
+/* ===================================== */
+/* MY APPLICATIONS PAGE */
+/* ===================================== */
+
+.applications-container {
+  position: relative;
+  padding: 120px 8%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #f1f5ff 100%
+  );
+  overflow: hidden;
+}
+
+/* Glow Background */
+.applications-container::before,
+.applications-container::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.applications-container::before {
+  background: #c7d2fe;
+  top: -150px;
+  left: -150px;
+}
+
+.applications-container::after {
+  background: #bfdbfe;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Content above glow */
+.applications-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===================================== */
+/* HEADER */
+/* ===================================== */
+
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.applications-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Filter */
+.filter-select {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(100, 116, 139, 0.05);
+  transition: 0.3s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+}
+
+/* ===================================== */
+/* GRID */
+/* ===================================== */
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* ===================================== */
+/* CARD */
+/* ===================================== */
+
+.application-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(100, 116, 139, 0.08);
+  transition: all 0.35s ease;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.application-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(100, 116, 139, 0.15);
+}
+
+/* Header inside card */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* ===================================== */
+/* STATUS BADGES */
+/* ===================================== */
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ===================================== */
+/* TEXT */
+/* ===================================== */
+
+.application-card p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* ===================================== */
+/* EMPTY / LOADING BOX */
+/* ===================================== */
+
+.empty-box {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(100, 116, 139, 0.05);
+  font-size: 15px;
+  color: #64748b;
+}
+
+.empty-box.error {
+  color: #b91c1c;
+}
+
+/* ===================================== */
+/* ANIMATION */
+/* ===================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media (max-width: 1200px) {
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .applications-container {
+    padding: 80px 20px;
+  }
+
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .applications-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

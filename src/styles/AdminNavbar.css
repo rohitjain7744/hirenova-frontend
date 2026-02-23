@@ -1,0 +1,112 @@
+/* ===================================== */
+/* ADMIN NAVBAR */
+/* ===================================== */
+
+.admin-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #111827;
+  padding: 15px 8%;
+  z-index: 1000;
+}
+
+.admin-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.admin-logo img {
+  width: 35px;
+}
+
+.admin-logo span {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Links */
+.admin-links {
+  display: flex;
+  gap: 25px;
+}
+
+.admin-links a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.admin-links a:hover,
+.admin-links a.active {
+  color: #3b82f6;
+}
+
+/* Right */
+.admin-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-name {
+  color: white;
+  font-size: 14px;
+}
+
+.admin-logout {
+  background: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.admin-logout:hover {
+  background: #dc2626;
+}
+
+/* Hamburger */
+.admin-hamburger {
+  display: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+  .admin-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #1f2937;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    display: none;
+  }
+
+  .admin-links.active {
+    display: flex;
+  }
+
+  .admin-hamburger {
+    display: block;
+  }
+}
