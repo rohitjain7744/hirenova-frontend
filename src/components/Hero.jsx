@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/landing.css";
+import "../styles/Landing.css";
 import bgImage from "../assets/heroback.png";          // your background image
 import heroRight from "../assets/herologo.png"; // your right side image
 
