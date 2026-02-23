@@ -3,7 +3,7 @@ import FeaturedCompanies from "../components/FeaturedCompanies";
 import JobCategories from "../components/JobCategories";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery";
-import Footer from "../components/footer";   // ✅ fixed (lowercase)
+import Footer from "../components/Footer";   // ✅ fixed (lowercase)
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import sectionBg from "../assets/back1.png";
