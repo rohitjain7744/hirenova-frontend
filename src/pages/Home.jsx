@@ -3,10 +3,10 @@ import FeaturedCompanies from "../components/FeaturedCompanies";
 import JobCategories from "../components/JobCategories";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";   // ✅ fixed (lowercase)
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
-import sectionBg from "../assets/back1.png"; // your background image
+import sectionBg from "../assets/back1.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,16 +14,10 @@ function Home() {
   return (
     <div className="home-wrapper">
 
-      {/* 1️⃣ HERO */}
       <Hero />
-
-      {/* 2️⃣ FEATURED COMPANIES */}
       <FeaturedCompanies />
-
-      {/* 3️⃣ JOB CATEGORIES */}
       <JobCategories />
 
-      {/* 4️⃣ WHY CHOOSE US */}
       <section
         className="why-section"
         style={{ backgroundImage: `url(${sectionBg})` }}
@@ -34,7 +28,6 @@ function Home() {
           <h2>Why Choose HireNova?</h2>
 
           <div className="why-grid">
-
             <div className="why-card">
               <h3>⚡ Fast Applications</h3>
               <p>
@@ -55,18 +48,13 @@ function Home() {
                 Find opportunities that match your skills and career goals.
               </p>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 5️⃣ TESTIMONIALS */}
       <Testimonials />
-
-      {/* 6️⃣ GALLERY */}
       <Gallery />
 
-      {/* 7️⃣ CALL TO ACTION */}
       <section
         className="cta-section"
         style={{ backgroundImage: `url(${sectionBg})` }}
@@ -94,7 +82,6 @@ function Home() {
         </div>
       </section>
 
-      {/* 8️⃣ FOOTER */}
       <Footer />
 
     </div>
