@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/Login.css";
+import "../styles/Register.css";
 
 const API_BASE = "https://hirenova-backend-production.up.railway.app";
 

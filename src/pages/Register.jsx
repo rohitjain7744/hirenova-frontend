@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../styles/Login.css";
+import "../styles/Register.css"
 
 // 🔥 Ensure env variable exists
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
