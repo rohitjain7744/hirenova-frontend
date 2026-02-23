@@ -12,7 +12,7 @@ import Companies from "./pages/Companies";
 import Blog from "./pages/Blog";
 
 /* User */
-import Jobs from "./pages/Jobs;";
+import Jobs from "./pages/Jobs";
 import JobDetails from "./pages/JobDetails";
 import ApplyPage from "./pages/Applypge";
 import Profile from "./pages/Profile";
