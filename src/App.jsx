@@ -8,7 +8,7 @@ import AdminRoute from "./components/AdminRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Companies from "./pages/Companies"; // ✅ FIXED
+import Companies from "./pages/Companies";
 import Blog from "./pages/Blog";
 
 /* User */
@@ -23,7 +23,7 @@ import UserDashboard from "./pages/UserDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import ManageJobs from "./pages/ManageJobs";
 import AdminApplications from "./pages/AdminApplications";
-import AdminUsers from "./pages/AdminUsers"; // ✅ FIXED
+import AdminUsers from "./pages/AdminUser";
 import AddJob from "./pages/AddJob";
 
 function App() {
@@ -33,11 +33,13 @@ function App() {
   return (
     <BrowserRouter>
 
+      {/* Navbar visible for all */}
       <Navbar />
 
       <Routes>
 
-        {/* PUBLIC */}
+        {/* ===== PUBLIC ROUTES ===== */}
+
         <Route path="/" element={<Home />} />
         <Route path="/companies" element={<Companies />} />
         <Route path="/blog" element={<Blog />} />
@@ -52,7 +54,8 @@ function App() {
           element={!user ? <Register /> : <Navigate to="/" />}
         />
 
-        {/* USER */}
+        {/* ===== USER ROUTES ===== */}
+
         <Route
           path="/jobs"
           element={
@@ -107,7 +110,8 @@ function App() {
           }
         />
 
-        {/* ADMIN */}
+        {/* ===== ADMIN ROUTES ===== */}
+
         <Route
           path="/admin/dashboard"
           element={
@@ -153,6 +157,7 @@ function App() {
           }
         />
 
+        {/* ===== FALLBACK ===== */}
         <Route path="*" element={<Navigate to="/" />} />
 
       </Routes>
