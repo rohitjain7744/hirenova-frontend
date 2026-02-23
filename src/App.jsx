@@ -13,18 +13,18 @@ import Blog from "./pages/Blog";
 
 /* User */
 import Jobs from "./pages/Jobs";
-import JobDetails from "./pages/JobDetails";
+import JobDetails from "./pages/Jobdetails";
 import ApplyPage from "./pages/Applypage";
 import Profile from "./pages/Profile";
-import MyApplications from "./pages/MyApplications";
-import UserDashboard from "./pages/UserDashboard";
+import MyApplications from "./pages/Myapplications";
+import UserDashboard from "./pages/Userdashboard";
 
 /* Admin */
-import AdminDashboard from "./pages/AdminDashboard";
-import ManageJobs from "./pages/ManageJobs";
-import AdminApplications from "./pages/AdminApplications";
-import AdminUsers from "./pages/AdminUsers";
-import AddJob from "./pages/AddJob";
+import AdminDashboard from "./pages/Admindashboard";
+import ManageJobs from "./pages/Managejobs";
+import AdminApplications from "./pages/Adminapplications";
+import AdminUsers from "./pages/Adminusers";
+import AddJob from "./pages/Addjob";
 
 function App() {
 
