@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/Register.css";
 
-const API_BASE = "https://hirenova-backend-production.up.railway.app";
+const API_BASE = "https://hirenova-backend-upe7.onrender.com";
 
 function Login() {
 
