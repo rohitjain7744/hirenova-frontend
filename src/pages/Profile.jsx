@@ -17,13 +17,11 @@ function Profile() {
 
   const userId = storedUser?.userId || storedUser?.id;
 
-  const authHeaders = token
-    ? {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }
-    : {};
+  const authHeaders = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  };
 
   const [user, setUser] = useState(storedUser);
   const [editMode, setEditMode] = useState(false);
@@ -80,12 +78,12 @@ function Profile() {
       alert("Profile Updated Successfully");
 
     } catch (error) {
-      console.error(error);
+      console.error("UPDATE ERROR:", error);
 
-      if (error.response?.status === 401) {
-        alert("Unauthorized. Please login again.");
+      if (error.response) {
+        alert(error.response.data);
       } else {
-        alert(error.response?.data || "Update failed");
+        alert("Server not responding");
       }
     }
   };
@@ -111,19 +109,33 @@ function Profile() {
       const res = await axios.post(
         `${API_BASE}/users/upload-photo/${userId}`,
         formData,
-        token
-          ? { headers: { Authorization: `Bearer ${token}` } }
-          : {}
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data"
+          }
+        }
       );
 
-      setUser(res.data);
-      localStorage.setItem("user", JSON.stringify(res.data));
+      // ✅ IMPORTANT FIX
+      const updatedUser = {
+        ...user,
+        profileImage: res.data.fileName
+      };
+
+      setUser(updatedUser);
+      localStorage.setItem("user", JSON.stringify(updatedUser));
 
       alert("Photo Uploaded Successfully");
 
     } catch (error) {
-      console.error(error);
-      alert(error.response?.data || "Upload failed");
+      console.error("UPLOAD ERROR:", error);
+
+      if (error.response) {
+        alert(error.response.data);
+      } else {
+        alert("Server crashed or not reachable");
+      }
     }
   };
 
@@ -152,8 +164,13 @@ function Profile() {
       setNewPassword("");
 
     } catch (error) {
-      console.error(error);
-      alert(error.response?.data || "Password change failed");
+      console.error("PASSWORD ERROR:", error);
+
+      if (error.response) {
+        alert(error.response.data);
+      } else {
+        alert("Server error");
+      }
     }
   };
 
@@ -180,8 +197,13 @@ function Profile() {
       navigate("/register");
 
     } catch (error) {
-      console.error(error);
-      alert(error.response?.data || "Delete failed");
+      console.error("DELETE ERROR:", error);
+
+      if (error.response) {
+        alert(error.response.data);
+      } else {
+        alert("Delete failed");
+      }
     }
   };
 
